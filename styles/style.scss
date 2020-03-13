@@ -33,22 +33,17 @@ $black: #000000;
 
 $brand-primary: #cd2a38;
 $brand-secondary: #129248;
-//$brand-tertiary: 				#cacaca;
-//$brand-quaternary: 				#f1f1ef;
-
-$supplement-color1: #a4c639;
-$supplement-color2: #db4437;
 
 $bgcolor: #ffffff;
 $textcolor: $black;
 $linkcolor: $brand-primary;
 $titlecolor: $black;
 
-$gray200: #f7f7f7; // almost white
-$gray175: #cdcdcd; // lighter gray
-$gray150: #8d9ca1; // light gray
+$gray200: #f7f7f7;
+$gray175: #cdcdcd;
+$gray150: #8d9ca1;
 $gray125: #6d7777;
-$gray50: #2d4048; // dark gray
+$gray50: #2d4048;
 
 $msgerror: #db4437;
 $msgsuccess: #3b5f12;
@@ -102,6 +97,12 @@ body {
 
 a {
 	color: $brand-primary;
+	text-decoration: underline;
+
+	&:hover {
+		text-decoration: none;
+		color: darken($brand-primary, 10%);
+	}
 }
 
 h1,
@@ -114,6 +115,12 @@ h6 {
 	margin-top: 0;
 	padding-bottom: 0;
 	line-height: $line-height;
+}
+
+ul {
+	li {
+		margin-bottom: ($base-line-height / 2);
+	}
 }
 
 // Wrapper
@@ -210,13 +217,15 @@ h2 {
 	padding: ($base-line-height / 2) ($grid-gutter-width / 2);
 	margin-bottom: ($base-line-height);
 	border: 2px solid $gray200;
-	border-radius: 3px;
+	border-radius: 4px;
 	text-decoration: none;
 	overflow: hidden;
+	transition: background-color 400ms $easeOutQuart, border-color 800ms $easeOutQuart;
 
 	&:hover {
 		background-color: $gray200;
 		color: darken($brand-primary, 10%);
+		border-color: darken($gray200, 10%);
 
 		.tag {
 			&:after {
