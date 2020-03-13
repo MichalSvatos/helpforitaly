@@ -1,0 +1,11 @@
+{
+  "name": "helpforitaly",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://MichalSvatos@github.com/MichalSvatos/helpforitaly.git",
+  "author": "Michal Svatoš <michal.svatos@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "sass": "^1.26.2"
+  }
+}
