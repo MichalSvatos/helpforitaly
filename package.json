@@ -1,12 +1,16 @@
 {
   "name": "helpforitaly",
   "version": "1.0.0",
-  "main": "index.js",
   "repository": "https://MichalSvatos@github.com/MichalSvatos/helpforitaly.git",
   "author": "Michal Svatoš <michal.svatos@gmail.com>",
   "license": "MIT",
   "devDependencies": {
     "cssnano": "^4.1.10",
-    "sass": "^1.26.2"
+    "sass": "^1.26.2",
+    "parcel": "^1.12.4"
+  },
+  "scripts": {
+    "build": "parcel build index.html styles/style.scss",
+    "start": "parcel serve index.html styles/style.scss"
   }
 }
