@@ -1,0 +1,28 @@
+{
+  "institutions" : [
+    {
+      "name" : "Humanitas Gavazzeni",
+      "url" : "https://donazioni.humanitas.it/",
+      "desc" : "",
+      "location" : "Bergamo, Lombardia"
+    },
+    {
+      "name" : "ASST Fatebenefratelli Sacco",
+      "url" : "https://www.asst-fbf-sacco.it/news/info/sostenere-lasst-fatebenefratelli-sacco-con-una-donazione",
+      "desc" : "",
+      "location" : "Milano, Lombardia"
+    },
+    {
+      "name" : "Regione Lombardia",
+      "url" : "https://www.regione.lombardia.it/wps/portal/istituzionale/HP/DettaglioRedazionale/servizi-e-informazioni/cittadini/salute-e-prevenzione/coronavirus/coronavirus-raccolta-fondi",
+      "desc" : "",
+      "location" : "Lombardia"
+    },
+    {
+      "name" : "Croce Rossa di Milano",
+      "url" : "http://www.crimilano.it/appello-covid-19.html",
+      "desc" : "",
+      "location" : "Milano, Lombardia"
+    }
+  ]
+}
