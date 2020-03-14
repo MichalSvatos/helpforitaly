@@ -1,6 +1,30 @@
 {
   "institutions" : [
     {
+      "name" : "CORONAVIRUS IN ITALY: DONATIONS FOR ITALIAN HOSPITALS",
+      "url" : "https://www.specchiodeitempi.org/coronavirus-in-italy-donations-for-italian-hospitals/",
+      "desc" : "",
+      "location" : "Italia"
+    },
+    {
+      "name" : "Help Roma tackle COVID-19 crisis",
+      "url" : "https://www.gofundme.com/f/1help-as-roma-tackle-covid19",
+      "desc" : "gofundme campaign organized by 'AS Roma' and 'Roma Cares' foundations.",
+      "location" : "Rome, Lazio"
+    },
+    {
+      "name" : "Covid19-Potenziamo la medicina d'urgenza a Firenze",
+      "url" : "https://www.gofundme.com/f/covid19-potenziamo-la-terapia-intensiva-a-firenze",
+      "desc" : "gofundme campaign organized by non-profit organization 'Gli Amici del Pronto Soccorso', represented by prof. Stefano Gridoni, head of the Emergency Department of the Careggi Hospital in Florence.",
+      "location" : "Firenze, Toscana"
+    },
+    {
+      "name" : "Coronavirus, rafforziamo la terapia intensiva",
+      "url" : "https://www.gofundme.com/f/coronavirus-terapia-intensiva",
+      "desc" : "gofundme campaign organized by Chiara Ferragni and Fedez for San Raffaele Hospital in Milan.",
+      "location" : "Milan, Lombardia"
+    },
+    {
       "name" : "Humanitas Gavazzeni",
       "url" : "https://donazioni.humanitas.it/",
       "desc" : "Page only in Italian. You can donate to several cities or 'where is more need it' (Emergenza Covid-19 - dove c'è più bisogno) ",
@@ -23,6 +47,24 @@
       "url" : "http://www.crimilano.it/appello-covid-19.html",
       "desc" : "Options to donate under 'DONA ORA!' - 9€, 25€, 40€, 75€. Redirect to PayPal.",
       "location" : "Milano, Lombardia"
+    },
+    {
+      "name" : "Caritas Italiana",
+      "url" : "https://www.caritas.it/home_page_archivio/come_contribuire/00000041_Dona_ora.html",
+      "desc" : "Page only in Italian. Bank accounts are listed under 'BONIFICO BANCARIO'.",
+      "location" : "Rome, Lazio"
+    },
+    {
+      "name" : "Croce Rossa Italiana",
+      "url" : "https://donazioni.cri.it/donazioni/dona-per-emergenza-coronavirus",
+      "desc" : "Page only in Italian. Fill the amount, click to 'AGGIUNGI AL CARRELLO' (add to cart). Then red message will appear - click on 'Visualizza carrello' (show cart).",
+      "location" : "Italia"
+    },
+    {
+      "name" : "COVID-19 Solidarity Response Fund for WHO",
+      "url" : "https://covid19responsefund.org/",
+      "desc" : "Not specifically for Italy. It's coordinated global effort.",
+      "location" : "global"
     }
   ]
 }
