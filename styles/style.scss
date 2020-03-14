@@ -131,6 +131,7 @@ ul {
 	@media (min-width: $bp-lg) {
 		width: 80vw;
 		padding: ($base-line-height) ($grid-gutter-width);
+		box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25); // https://tailwindcss.com/docs/box-shadow/
 	}
 
 	@media (min-width: $bp-xl) {
@@ -186,6 +187,15 @@ h2 {
 	text-transform: lowercase;
 }
 
+.no-js__message {
+	text-align: center;
+	background-color: $brand-primary;
+	color: #ffffff;
+	border-radius: 4px;
+	overflow: hidden;
+	margin-bottom: ($base-line-height);
+}
+
 // Sections
 .section {
 	margin-bottom: ($base-line-height * 2);
@@ -200,8 +210,8 @@ h2 {
 	color: $gray125
 }
 
-// Links
-.links {
+// Institutions
+.institutions {
 	display: flex;
 	flex-direction: column;
 
@@ -213,7 +223,7 @@ h2 {
 	}
 }
 
-.link__item {
+.institution__item {
 	padding: ($base-line-height / 2) ($grid-gutter-width / 2);
 	margin-bottom: ($base-line-height);
 	border: 2px solid $gray200;
@@ -226,12 +236,6 @@ h2 {
 		background-color: $gray200;
 		color: darken($brand-primary, 10%);
 		border-color: darken($gray200, 10%);
-
-		.tag {
-			&:after {
-				background-color: $gray200;
-			}
-		}
 	}
 
 	@media (min-width: $bp-lg) {
@@ -241,14 +245,14 @@ h2 {
 	}
 }
 
-.link__title {
+.institution__title {
 	display: block;
 	font-size: $font-size;
 	text-transform: uppercase;
 	font-weight: $fontbold;
 }
 
-.link__url {
+.institution__url {
 	display: block;
 	font-size: ($font-size * .75);
 	margin-bottom: ($base-line-height / 2);
@@ -257,12 +261,12 @@ h2 {
 	word-break: break-all;
 }
 
-.link__desc {
+.institution__desc {
 
 }
 
-// Tags
-.tag {
+// Location
+.loc {
 	display: inline-block;
 	font-size: ($font-size * .5);
 	background-color: $brand-secondary;
@@ -277,17 +281,20 @@ h2 {
 		content: '';
 		display: block;
 		position: absolute;
-		left: .8rem;
+		left: .5rem;
 		top: 50%;
 		transform: translateY(-50%);
-		background-color: #ffffff;
-		width: 0.7rem;
-		height: 0.7rem;
-		border-radius: 50%;
+		//background-color: #ffffff;
+		background-image: url(data:image/svg+xml;base64,PHN2ZyBoZWlnaHQ9IjUxMiIgdmlld0JveD0iMCAwIDUxMiA1MTIiIHdpZHRoPSI1MTIiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHBhdGggZD0iTTI1Ni4wOCA1NWM4NC44NyAwIDE1My44MSA2OC45NCAxNTMuODEgMTUzLjk2IDAgNzcuMDYtODcuMDIgMTk1LjAzLTE1My4yIDI0Ni4wNC04NS4zMy02OS4yNC0xNTQuNTgtMTY3Ljc1LTE1NC41OC0yNDYuMDRDMTAyLjExIDEyMy45NCAxNzEuMDUgNTUgMjU2LjA4IDU1em03NC43OSAxNTAuOGE3NC44NyA3NC44NyAwIDEwLTE0OS43NC4wMSA3NC44NyA3NC44NyAwIDAwMTQ5Ljc0LS4wMXoiIGZpbGw9IiNmZmYiLz48L3N2Zz4=);
+		background-repeat: no-repeat;
+		background-size: cover;
+		width: 1.3rem;
+		height: 1.3rem;
+		//border-radius: 50%;
 	}
 }
 
-.useful-information {
+.links {
 	word-break: break-all;
 }
 
