@@ -1,0 +1,3 @@
+[alias]
+	commitpages = git add dist && git commit -m "$1"
+	push = git subtree push --prefix dist origin gh-pages
