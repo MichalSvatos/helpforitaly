@@ -3,25 +3,25 @@
     {
       "name" : "Humanitas Gavazzeni",
       "url" : "https://donazioni.humanitas.it/",
-      "desc" : "",
+      "desc" : "Page only in Italian. You can donate to several cities or 'where is more need it' (Emergenza Covid-19 - dove c'è più bisogno) ",
       "location" : "Bergamo, Lombardia"
     },
     {
       "name" : "ASST Fatebenefratelli Sacco",
       "url" : "https://www.asst-fbf-sacco.it/news/info/sostenere-lasst-fatebenefratelli-sacco-con-una-donazione",
-      "desc" : "",
+      "desc" : "Page only in Italian. In the article is bank IBAN",
       "location" : "Milano, Lombardia"
     },
     {
       "name" : "Regione Lombardia",
       "url" : "https://www.regione.lombardia.it/wps/portal/istituzionale/HP/DettaglioRedazionale/servizi-e-informazioni/cittadini/salute-e-prevenzione/coronavirus/coronavirus-raccolta-fondi",
-      "desc" : "",
+      "desc" : "Page only in Italian. In the article is bank IBAN",
       "location" : "Lombardia"
     },
     {
       "name" : "Croce Rossa di Milano",
       "url" : "http://www.crimilano.it/appello-covid-19.html",
-      "desc" : "",
+      "desc" : "Options to donate under 'DONA ORA!' - 9€, 25€, 40€, 75€. Redirect to PayPal.",
       "location" : "Milano, Lombardia"
     }
   ]
