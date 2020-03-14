@@ -20,21 +20,6 @@
 		});
 	</script>
 
-	<script>
-		function canUseWebP() {
-			var elem = document.createElement('canvas');
-
-			if (!!(elem.getContext && elem.getContext('2d'))) {
-				return elem.toDataURL('image/webp').indexOf('data:image/webp') == 0;
-			}
-			return false;
-		}
-
-		if(canUseWebP()){
-			document.getElementsByTagName( 'html' )[0].className += ' webp';
-		}
-	</script>
-
 	<!-- Styles -->
 	<link rel="stylesheet" href="./src/scss/style.scss">
 
@@ -97,25 +82,38 @@
 		</ul>
 	</section>
 
+	<section class="section section--share">
+		<h3>Please share</h3>
+		<div class="share">
+			<button class="button button--twitter" data-sharer="twitter" data-title="Please visit 'Help for Italy'" data-hashtags="covid19, coronavirus, italia" data-url="https://michalsvatos.github.io/helpforitaly/">tw</button>
+			<button class="button button--facebook" data-sharer="facebook" data-title="Please visit 'Help for Italy'" data-hashtag="covid19" data-url="https://michalsvatos.github.io/helpforitaly/">fb</button>
+			<button class="button button--reddit" data-sharer="reddit" data-url="https://michalsvatos.github.io/helpforitaly/">re</button>
+		</div>
+
+	</section>
+
 	<section class="section section--quote">
-		<h3>Why?</h3>
-		<p>Because I wanna help. My girlfriend is an Italian and shortly after we met Italy became my second home. I have almost all my friends there. And it really hurts to see what is happening right now there. In my country (Czech Republic) many talented and smart people working hard to help everyone, to really make a difference. I'm just trying to do what I can do.</p>
-		<p>And before someone tell me that those and those needs help too. Yes, of course. Everyone needs help for different reasons. But, expressing support to one group, doesn't mean disinterest in others.</p>
+		<h3>Why I created this site?</h3>
+		<p>Because I wanna help. My girlfriend is an Italian and shortly after we met Italy became my second home. I
+			have almost all my friends there. And it really hurts to see what is happening right now there. In my
+			country (Czech Republic) many talented and smart people working hard to help everyone, to really make a
+			difference. I'm just trying to do what I can do.</p>
+		<p>And before someone tell me that those and those needs help too. Yes, of course. Everyone needs help for
+			different reasons. But, expressing support to one group, doesn't mean disinterest in others.</p>
 	</section>
 
 
 	<footer>
 		<p>
-			<span id="js-current-year"></span>, Coded by <a href="https://twitter.com/MichalSvatos" target="_blank" rel="noopener">@MichalSvatos</a> with ❤️ for 🇮🇹Italy
+			<span id="js-current-year"></span>, Coded by
+			<a href="https://twitter.com/MichalSvatos" target="_blank" rel="noopener">@MichalSvatos</a> with ❤️ for
+			🇮🇹Italy
 			<br>
-			Edited buoy icon by <a href="https://www.iconfinder.com/deasigner_jae" target="_blank" rel="noopener">Dea Jae</a>
+			Edited buoy icon by <a href="https://www.iconfinder.com/deasigner_jae" target="_blank" rel="noopener">Dea
+			Jae</a>
 		</p>
 	</footer>
 </div>
-
-<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
-<!--	If you're here, you can buy me some Chinotto or Lemon Soda :) - 1F1tAaz5x1XHUrCNLbtMDqcw6o5GNn4xqA     -->
-<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
 
 <script>
 	var d = new Date();
@@ -123,6 +121,7 @@
 </script>
 
 <!-- Scripts -->
+<script src="https://cdn.jsdelivr.net/npm/sharer.js@latest/sharer.min.js" async></script>
 <script src="./src/js/script.js"></script>
 
 </body>

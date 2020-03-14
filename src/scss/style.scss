@@ -215,14 +215,15 @@ h2 {
 .institution__item {
 	padding: ($base-line-height / 2) ($grid-gutter-width / 2);
 	margin-bottom: ($base-line-height);
-	border: 2px solid $gray200;
+	border: 1px solid $gray200;
 	border-radius: 4px;
 	text-decoration: none;
 	overflow: hidden;
 	transition: background-color 400ms $easeOutQuart, border-color 800ms $easeOutQuart;
+	background-color: $gray200;
 
 	&:hover {
-		background-color: $gray200;
+		background-color: #ffffff;
 		color: darken($brand-primary, 10%);
 		border-color: darken($gray200, 10%);
 	}
@@ -285,6 +286,48 @@ h2 {
 
 .links {
 	word-break: break-all;
+}
+
+// Share
+$fbblue: 						#3b5998;
+$twblue: 						#00b0ed;
+$redred: 						#fe4500;
+
+.section--share {
+	text-align: center;
+	border-top: 2px solid $gray200;
+	padding-top: ($base-line-height);
+}
+
+.button {
+	display: inline-block;
+	border: 0;
+	color: #ffffff;
+	font-weight: $fontbold;
+	text-transform: uppercase;
+	width: 3rem;
+	height: 3rem;
+	padding: 0;
+	margin: 0 ($grid-gutter-width / 3);
+	cursor: pointer;
+	border-radius: 4px;
+
+	&:hover {
+		opacity: .8;
+	}
+
+
+	&--facebook {
+		background-color: $fbblue;
+	}
+
+	&--twitter {
+		background-color: $twblue;
+	}
+
+	&--reddit {
+		background-color: $redred;
+	}
 }
 
 // Footer
