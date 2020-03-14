@@ -10,7 +10,7 @@
     "parcel": "^1.12.4"
   },
   "scripts": {
-    "build": "parcel build index.html styles/style.scss",
-    "start": "parcel serve index.html styles/style.scss"
+    "build": "parcel build index.html src/styles/style.scss",
+    "start": "parcel serve index.html src/scss/style.scss src/js/script.js"
   }
 }

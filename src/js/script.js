@@ -23,7 +23,8 @@ function ajax_get(url, callback) {
 	xmlhttp.send();
 }
 
-ajax_get('scripts/institutions.json', function(data) {
+ajax_get('../data/institutions.json', function(data) {
+	console.log("institutions: " + data);
 	let html = '';
 
 	for (let i=0; i < data['institutions'].length; i++) {
@@ -40,7 +41,8 @@ ajax_get('scripts/institutions.json', function(data) {
 	document.getElementById("institutions").innerHTML = html;
 });
 
-ajax_get('scripts/links.json', function (data) {
+ajax_get('../data/links.json', function (data) {
+	console.log("links: " + data);
 	let links = '';
 
 	for (let i=0; i < data['links'].length; i++) {
