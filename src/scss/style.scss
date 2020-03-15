@@ -206,6 +206,16 @@ h2 {
 
 // Institutions
 .institutions {
+
+}
+
+.institutions__region-title {
+	border-top: 2px solid $gray200;
+	padding-top: ($base-line-height);
+	color: $brand-secondary;
+}
+
+.institution__region-wrapper {
 	display: flex;
 	flex-direction: column;
 
@@ -265,7 +275,7 @@ h2 {
 }
 
 // Location
-.loc {
+.payment {
 	display: inline-block;
 	font-size: ($font-size * .5);
 	background-color: $brand-secondary;
