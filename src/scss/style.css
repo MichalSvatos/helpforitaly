@@ -154,6 +154,14 @@ h2 {
   margin-bottom: 5.6rem;
 }
 
+.section--note {
+  font-size: 1.275rem;
+  margin-top: -5.6rem;
+  margin-bottom: 8.4rem;
+  line-height: 2.1rem;
+  color: #8d9ca1;
+}
+
 .institutions__region-title {
   border-top: 2px solid #f7f7f7;
   padding-top: 2.8rem;
