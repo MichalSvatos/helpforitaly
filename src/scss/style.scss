@@ -204,6 +204,14 @@ h2 {
 	margin-bottom: ($base-line-height * 2);
 }
 
+.section--note {
+	font-size: ($font-size * .75);
+	margin-top: -($base-line-height * 2);
+	margin-bottom: ($base-line-height * 3);
+	line-height: ($line-height * .75);
+	color: $gray150;
+}
+
 // Institutions
 .institutions {
 
