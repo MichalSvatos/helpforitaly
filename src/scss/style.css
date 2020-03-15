@@ -154,12 +154,18 @@ h2 {
   margin-bottom: 5.6rem;
 }
 
-.institutions {
+.institutions__region-title {
+  border-top: 2px solid #f7f7f7;
+  padding-top: 2.8rem;
+  color: #129248;
+}
+
+.institution__region-wrapper {
   display: flex;
   flex-direction: column;
 }
 @media (min-width: 992px) {
-  .institutions {
+  .institution__region-wrapper {
     flex-direction: row;
     flex-wrap: wrap;
     margin-left: -1.5rem;
@@ -214,7 +220,7 @@ h2 {
   line-height: 2.1rem;
 }
 
-.loc {
+.payment {
   display: inline-block;
   font-size: 0.85rem;
   background-color: #129248;
@@ -225,7 +231,7 @@ h2 {
   text-transform: uppercase;
   line-height: 2.1rem;
 }
-.loc:after {
+.payment:after {
   content: "";
   display: block;
   position: absolute;
