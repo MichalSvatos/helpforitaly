@@ -142,13 +142,43 @@ function ajax_get(url, callback) {
 }
 
 ajax_get('data/institutions.json', function (data) {
+  var locations = [];
   var html = '';
+  var finalHtml = ''; // ... with the help from Petr Kinc :)
+
+  var _loop = function _loop(i) {
+    var location = data['institutions'][i]["location"];
+    var hasLocationGroup = locations.find(function (o) {
+      return o.name === location;
+    }); // let payments = data['institutions'][i]["payment"];
+
+    var html = "<a href=\"".concat(data['institutions'][i]["url"], "\" target=\"_blank\" rel=\"noopener\" class=\"institution__item\">\n\t\t\t\t\t<span class=\"institution__title\">").concat(data['institutions'][i]["name"], "</span>\n\t\t\t\t\t<span class=\"institution__url\">").concat(data['institutions'][i]["url"], "</span>\n\t\t\t\t\t<span class=\"institution__desc\">").concat(data['institutions'][i]["desc"], "</span>\n\t\t\t\t\t<span class=\"institution__pay\">\n\t\t\t\t\t\t<span class=\"payment\"></span>\n\t\t\t\t\t</span>\n\t\t\t\t</a>");
+
+    if (hasLocationGroup) {
+      var index = locations.findIndex(function (x) {
+        return x.name === location;
+      });
+      locations[index].html += html;
+    } else {
+      var locationObj = {
+        name: location,
+        html: html
+      };
+      locations.push(locationObj);
+    }
+  };
 
   for (var i = 0; i < data['institutions'].length; i++) {
-    html += "<a href=\"".concat(data['institutions'][i]["url"], "\" target=\"_blank\" rel=\"noopener\" class=\"institution__item\">\n\t\t\t\t\t<span class=\"institution__title\">").concat(data['institutions'][i]["name"], "</span>\n\t\t\t\t\t<span class=\"institution__url\">").concat(data['institutions'][i]["url"], "</span>\n\t\t\t\t\t<span class=\"institution__desc\">").concat(data['institutions'][i]["desc"], "</span>\n\t\t\t\t\t<span class=\"institution__loc\">\n\t\t\t\t\t\t<span class=\"loc\">").concat(data['institutions'][i]["location"], "</span>\n\t\t\t\t\t</span>\n\t\t\t\t</a>");
+    _loop(i);
   }
 
-  document.getElementById("institutions").innerHTML = html;
+  for (var _i = 0; _i < locations.length; _i++) {
+    var name = locations[_i].name;
+    var _html = locations[_i].html;
+    finalHtml += "<div class=\"instutitions__section\">\n\t\t\t\t\t\t<h4 class=\"institutions__region-title\">".concat(name, "</h4>\n\n\t\t\t\t\t\t<div class=\"institution__region-wrapper\">").concat(_html, "</div>\n\t\t\t\t\t</div>");
+  }
+
+  document.getElementById("institutions").innerHTML = finalHtml;
 });
 ajax_get('data/links.json', function (data) {
   var links = '';
@@ -187,7 +217,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "60742" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "64032" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
