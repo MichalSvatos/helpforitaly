@@ -3,6 +3,8 @@
 // by Gabor Szabo
 // edited
 
+let version = Math.floor((Math.random() * 100) + 1);
+
 function ajax_get(url, callback) {
 	var xmlhttp = new XMLHttpRequest();
 
@@ -23,7 +25,7 @@ function ajax_get(url, callback) {
 	xmlhttp.send();
 }
 
-ajax_get('data/institutions.json', function(data) {
+ajax_get('data/institutions.json?' + version, function(data) {
 	let locations = [];
 	let html = '';
 	let finalHtml = '';
@@ -74,7 +76,7 @@ ajax_get('data/institutions.json', function(data) {
 });
 
 
-ajax_get('data/links.json', function (data) {
+ajax_get('data/links.json?' + version, function (data) {
 	let links = '';
 
 	for (let i=0; i < data['links'].length; i++) {
