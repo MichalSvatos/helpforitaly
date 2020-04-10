@@ -246,9 +246,28 @@ img {
 }
 
 .institutions__region-title {
-	border-top: 2px solid $gray200;
-	padding-top: ($base-line-height);
-	color: $brand-secondary;
+	background-image: url("../images/banners/regione-default.png");
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-size: cover;
+	transition: background-image 1250ms $easeOutBack;
+	padding: ($base-line-height * 1.25) ($grid-gutter-width);
+	color: $white;
+	text-shadow: 0 1px 8px $gray50;
+}
+
+$regions: lombardia emilia-romagna veneto lazio italia toscana piemonte valle-daosta umbria global;
+
+@each $region in $regions {
+	.institutions__section--#{$region} {
+		.institutions__region-title {
+			&.is-loaded {
+				background-image: url("../images/banners/regione-#{$region}.jpg");
+				background-position: center center;
+				background-size: cover;
+			}
+		}
+	}
 }
 
 .institution__region-wrapper {
@@ -311,7 +330,7 @@ img {
 }
 
 // Location
-.payment {
+.location {
 	display: none;
 	font-size: ($font-size * .5);
 	background-color: $brand-secondary;

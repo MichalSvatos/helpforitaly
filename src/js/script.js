@@ -41,8 +41,8 @@ ajax_get('data/institutions.json?' + version, function(data) {
 					<span class="institution__title">${data['institutions'][i]["name"]}</span>
 					<span class="institution__url">${data['institutions'][i]["url"]}</span>
 					<span class="institution__desc">${data['institutions'][i]["desc"]}</span>
-					<span class="institution__pay">
-						<span class="payment"></span>
+					<span class="institution__tags">
+						<span class="location"></span>
 					</span>
 				</a>`;
 
@@ -63,22 +63,21 @@ ajax_get('data/institutions.json?' + version, function(data) {
 	for (let i = 0; i < locations.length; i++) {
 		let name = locations[i].name;
 		let html = locations[i].html;
+		let className = slugify(name);
 
-		finalHtml += `<div class="instutitions__section">
-						<h4 class="institutions__region-title">${name}</h4>
+		finalHtml += `<div class="instutitions__section institutions__section--${className}">
+						<h4 class="institutions__region-title js-lazyload">${name}</h4>
 
 						<div class="institution__region-wrapper">${html}</div>
 					</div>`;
 	}
 
 	document.getElementById("institutions").innerHTML = finalHtml;
-
 });
 
 
 ajax_get('data/links.json?' + version, function (data) {
 	let links = '';
-	console.log(data);
 
 	for (let i=0; i < data['links'].length; i++) {
 		links += `<li><a href="${data['links'][i]["url"]}" target="_blank" rel="noopener">${data['links'][i]["title"]}</a></li>`
@@ -87,3 +86,34 @@ ajax_get('data/links.json?' + version, function (data) {
 	document.getElementById("links").innerHTML = links;
 });
 
+
+// Slugify string
+function slugify(str) {
+	str = str
+		.toLowerCase()
+		.replace(/\s+/g, "-")
+		.replace(/[^a-z0-9 -]/g, "");
+
+	return str;
+}
+
+// Thanks Filip Vitas
+// https://medium.com/@filipvitas/lazy-load-images-with-zero-javascript-2c5bcb691274
+function lazyLoad(){
+	let titles =[...document.querySelectorAll('.js-lazyload')];
+	
+	function onIntersection(titleEntities) {
+		titleEntities.forEach(title => {
+			if (title.isIntersecting) {
+				observer.unobserve(title.target);
+				title.target.classList.add('is-loaded');
+			}
+		})
+	}
+
+	let observer = new IntersectionObserver(onIntersection);
+
+	titles.forEach(title => observer.observe(title));
+}
+
+setTimeout(lazyLoad, 2000);
