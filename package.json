@@ -10,7 +10,9 @@
     "parcel": "^1.12.4"
   },
   "scripts": {
-    "build": "parcel build index.html src/styles/style.scss",
-    "start": "parcel serve index.html src/scss/style.scss src/js/script.js"
+    "build": "parcel build index.html --public-url ./",
+    "start": "parcel serve index.html src/scss/style.scss src/js/script.js",
+    "commit": "git add dist && git commit -m",
+    "subtree": "git subtree push --prefix dist origin gh-pages"
   }
 }

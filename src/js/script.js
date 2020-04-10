@@ -78,9 +78,10 @@ ajax_get('data/institutions.json?' + version, function(data) {
 
 ajax_get('data/links.json?' + version, function (data) {
 	let links = '';
+	console.log(data);
 
 	for (let i=0; i < data['links'].length; i++) {
-		links += `<li><a href="${data['links'][i]}" target="_blank" rel="noopener">${data['links'][i]}</a></li>`
+		links += `<li><a href="${data['links'][i]["url"]}" target="_blank" rel="noopener">${data['links'][i]["title"]}</a></li>`
 	}
 
 	document.getElementById("links").innerHTML = links;

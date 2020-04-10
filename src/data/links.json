@@ -1,11 +1,32 @@
 {
   "links" : [
-    "https://www.youtube.com/watch?v=8A3jiM2FNR8",
-    "https://medium.com/@tomaspueyo/coronavirus-act-today-or-people-will-die-f4d3d9cd99ca",
-    "https://lab.gedidigital.it/gedi-visual/2020/coronavirus-i-contagi-in-italia/",
-    "https://www.worldometers.info/coronavirus/country/italy/",
-    "https://staythefuckhome.com/",
-    "https://stayinghome.club/",
-    "https://en.wikipedia.org/wiki/2020_coronavirus_pandemic_in_Italy"
+    {
+      "url" : "https://www.youtube.com/watch?v=8A3jiM2FNR8",
+      "title" : "Dr. Fauci Answers Trevor’s Questions About Coronavirus | The Daily Social Distancing Show"
+    },
+    {
+      "url" : "https://medium.com/@tomaspueyo/coronavirus-act-today-or-people-will-die-f4d3d9cd99ca",
+      "title" : "Coronavirus: Why You Must Act Now"
+    },
+    {
+      "url" : "https://lab.gedidigital.it/gedi-visual/2020/coronavirus-i-contagi-in-italia/",
+      "title" : "Coronavirus, la situazione in Italia (IT)"
+    },
+    {
+      "url": "https://www.worldometers.info/coronavirus/country/italy/",
+      "title": "Worldmeter Coronavirus - Italy"
+    },
+    {
+      "url": "https://staythefuckhome.com/",
+      "title": "#StayTheFuckHome - A Movement to Stop the COVID-19 Pandemic"
+    },
+    {
+      "url": "https://stayinghome.club/",
+      "title": "stayinghomeclub - A list of all the companies WFH or events changed because of covid-19"
+    },
+    {
+     "url": "https://en.wikipedia.org/wiki/2020_coronavirus_pandemic_in_Italy",
+      "title": "Wikipedia - 2020 coronavirus pandemic in Italy"
+    }
   ]
 }
