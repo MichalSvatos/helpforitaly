@@ -143,6 +143,12 @@
       "url" : "https://www.facebook.com/donate/205294173866063/2799445723438521/",
       "desc" : "Facebook fundraiser campaign for Croce Rossa Italiana - Comitato di Milano by Diners Club Italia",
       "location" : "Lombardia"
+    },
+    {
+      "name" : "CoraggioItalia",
+      "url" : "https://www.gofundme.com/f/coraggioitalia",
+      "desc" : "Gofundme campaign for 3 hospitals in Italy - Bergamo ASST Giovanni XXIII, Bologna AOU and Puglia Casa Sollievo della Sofferenza",
+      "location" : "Italia"
     }
   ]
 }
