@@ -251,9 +251,13 @@ img {
 	background-position: center center;
 	background-size: cover;
 	transition: background-image 1250ms $easeOutBack;
-	padding: ($base-line-height * 1.25) ($grid-gutter-width);
+	padding: ($base-line-height * 1.25) ($grid-gutter-width / 2);
 	color: $white;
-	text-shadow: 0 1px 8px $gray50;
+	text-shadow: 0 1px 8px $black;
+	
+	@media (min-width: $bp-md) {
+		padding: ($base-line-height * 1.25) ($grid-gutter-width);
+	}
 }
 
 $regions: lombardia emilia-romagna veneto lazio italia toscana piemonte valle-daosta umbria global;
